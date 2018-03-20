@@ -1,3 +1,9 @@
+<?php 
+  $bandera=FALSE;
+  if (isset($_SESSION["usuario"])) {
+    $bandera=TRUE;
+  }
+ ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,10 +17,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
   <body>
-      <div class="container">
         <div class="header">
           <img src="" alt="">
           <nav class="navbar navbar-expand sticky-top navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Sticky top</a>
+            <a class="navbar-brand" href="index.php">Adhesivos practiko</a>
+            <a class="navbar-brand" href="logUser.php">Login</a>
+            <a class="navbar-brand" href="<?php if($bandera){echo('carrito.php');}else{echo('logUser.php');} ?>">Carrito</a>
           </nav>
         </div>
+        <div class="container">
+          
+        

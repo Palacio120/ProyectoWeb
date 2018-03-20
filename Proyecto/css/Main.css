@@ -1,0 +1,37 @@
+.logConter{
+	background-color: #343a40 ;
+	width: 30%;
+	left: 35%;
+	top: 33.5%;
+	position: relative;
+	margin-bottom: 10%;
+	color:white;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.logConter label{
+	display: block;
+	padding-top:  10%;
+}
+
+#botonLog{
+	margin-top: 10%;
+	position: relative;
+	margin-bottom: 10%;
+	right: -20%;
+}
+
+
+.footer .col-3{
+	border: solid 1px;
+	border-collapse: collapse;
+}
+
+.footer #center-footer{
+	border: none;
+	border-top: solid 1px;
+	border-bottom: solid 1px;
+	border-collapse: collapse;
+
+}
