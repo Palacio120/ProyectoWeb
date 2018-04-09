@@ -1,13 +1,13 @@
 .logConter{
 	background-color: #343a40 ;
+	display:inline-block;
 	width: 30%;
-	left: 35%;
 	top: 33.5%;
-	position: relative;
 	margin-bottom: 10%;
 	color:white;
 	text-align: center;
 	border-radius: 10px;
+	margin-left:20%;
 }
 
 .logConter label{
@@ -26,6 +26,7 @@
 .footer .col-3{
 	border: solid 1px;
 	border-collapse: collapse;
+	bootom: 0px;
 }
 
 .footer #center-footer{
@@ -33,5 +34,35 @@
 	border-top: solid 1px;
 	border-bottom: solid 1px;
 	border-collapse: collapse;
+	background-color: #343a40;
+	color:white;
+	border-color: #343a40; 
 
+}
+
+#Divisor{
+	text-align:center;
+	display: block;
+	margin-top:10px;
+	background-color:#343a40;
+	color:white;
+	border-radius:10px;
+
+}
+
+.nuevoUsuario{
+	background-color: white ;
+	display:inline-block;
+	width: 30%;
+	top: 33.5%;
+	margin-bottom: 10%;
+	text-align: center;
+	border:solid 1px;
+	border-radius: 10px;
+	margin-left:5%;
+}
+
+.nuevoUsuario label{
+	display: block;
+	padding-top:  10%;
 }

@@ -18,13 +18,13 @@
   </head>
   <body>
         <div class="header">
-          <img src="" alt="">
           <nav class="navbar navbar-expand sticky-top navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.php">Adhesivos practiko</a>
+            <a class="navbar-brand" href="index.php">Boutique192</a>
             <a class="navbar-brand" href="logUser.php">Login</a>
             <a class="navbar-brand" href="<?php if($bandera){echo('carrito.php');}else{echo('logUser.php');} ?>">Carrito</a>
+            <a class="navbar-brand" href="#Catalogo.php">Catalogo</a>
           </nav>
         </div>
-        <div class="container">
+        <div class="container" style="overflow-x: hidden;">
           
         
