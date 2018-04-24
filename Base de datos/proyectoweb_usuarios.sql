@@ -27,7 +27,7 @@ CREATE TABLE `usuarios` (
   `Usuarios` varchar(255) DEFAULT NULL,
   `Contraseña` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,9 +36,53 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (3,'Alejandro','d51a471dbd44543098515ba37abb7a78'),(4,'Alejandro','d51a471dbd44543098515ba37abb7a78');
+INSERT INTO `usuarios` VALUES (5,'Alejandro','d51a471dbd44543098515ba37abb7a78'),(6,'Palacio120','d51a471dbd44543098515ba37abb7a78');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `proyectoweb`.`usuarios_AFTER_INSERT` AFTER INSERT ON `usuarios` FOR EACH ROW
+BEGIN
+	INSERT INTO `proyectoweb`.`perfil`
+(`idPerfil`,
+`Nombre`,
+`Telefono`,
+`Correo`,
+`TarjetaNum`,
+`CVV`,
+`Imagen`,
+`Tipo`,
+`Nombre_Img`,
+`Direccion`,
+`IDUsusario`
+)
+VALUES
+(0,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+new.ID
+);
+
+END */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -49,4 +93,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-09 10:28:20
+-- Dump completed on 2018-04-24 10:21:40

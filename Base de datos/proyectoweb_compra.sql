@@ -29,7 +29,9 @@ CREATE TABLE `compra` (
   `TIKET` int(10) unsigned NOT NULL,
   PRIMARY KEY (`idCompra`),
   KEY `Compra_idfk1_idx` (`TIKET`),
-  CONSTRAINT `Compra_idfk1` FOREIGN KEY (`TIKET`) REFERENCES `compras` (`idCompras`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  KEY `Producto_idx` (`Producto`),
+  CONSTRAINT `Compra_idfk1` FOREIGN KEY (`TIKET`) REFERENCES `compras` (`idCompras`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `Producto` FOREIGN KEY (`Producto`) REFERENCES `productos` (`idProductos`) ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -76,4 +78,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-09 10:28:19
+-- Dump completed on 2018-04-24 10:21:38
