@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: proyectoweb
 -- ------------------------------------------------------
--- Server version	5.7.17-log
+-- Server version	5.7.18-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -93,4 +93,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-24 10:21:40
+-- Dump completed on 2018-04-24 13:12:35

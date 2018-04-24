@@ -32,7 +32,10 @@ body {
 	margin-bottom: 10%;
 	right: -20%;
 }
-
+.footer {
+	position: relative;
+    padding-top: 115px;
+}
 
 .footer .col-3{
 	border: solid 1px;
@@ -99,4 +102,9 @@ body {
 	margin-top:10%;
 	display:inline-block;
 	margin-bottom:10%;
+}
+
+.textoCentrado{
+	padding-top: 35%;
+	padding-bottom: 35%;
 }

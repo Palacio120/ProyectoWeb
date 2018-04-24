@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: proyectoweb
 -- ------------------------------------------------------
--- Server version	5.7.17-log
+-- Server version	5.7.18-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -31,7 +31,7 @@ CREATE TABLE `temp` (
   KEY `Usuarios_idx` (`Id_Usuario`),
   CONSTRAINT `Productos` FOREIGN KEY (`Id_Prod`) REFERENCES `productos` (`idProductos`) ON UPDATE CASCADE,
   CONSTRAINT `Usuarios` FOREIGN KEY (`Id_Usuario`) REFERENCES `usuarios` (`ID`) ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `temp` (
 
 LOCK TABLES `temp` WRITE;
 /*!40000 ALTER TABLE `temp` DISABLE KEYS */;
-INSERT INTO `temp` VALUES (2,1,5),(5,6,5),(7,1,6),(11,3,6);
+INSERT INTO `temp` VALUES (2,1,5),(5,6,5);
 /*!40000 ALTER TABLE `temp` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-24 10:21:37
+-- Dump completed on 2018-04-24 13:12:34

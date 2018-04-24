@@ -20,7 +20,7 @@ include_once('header.php');
 			<h1><?php echo $rs["Nombre"] ?></h1>
 			<h3><i><?php echo "$ ".$rs["Precio"].".00"; ?></i></h3>
 			<p><?php echo $rs['Descripccion'] ?></p>
-			<button class="btn btn-ligth" style=" position: absolute;right: 10%;bottom: 35%;" onclick="AgregarCarrito(<?php echo $rs["idProductos"];?>)" >Agrgar al carrito</button>
+			<button class="btn btn-ligth" style=" " onclick="AgregarCarrito(<?php echo $rs["idProductos"];?>)" >Agrgar al carrito</button>
 		</div>
 <?php } ?>
 	</div>

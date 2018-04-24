@@ -4,7 +4,7 @@
 
       <div class="row">
         <div class="col-md-12">
-          <div style="margin-top: 10%">
+          <div style="margin-top: 20%">
             <div class="container">
               <div class="row">
                 <div class="logConter">
@@ -17,7 +17,7 @@
                     <input type="Submit" name="login" value="Submit" id="botonLog" class="btn btn-ligth">
                   </form>
                 </div>
-                <div class="nuevoUsuario" id=nuevo>
+                <div class="nuevoUsuario" id="nuevo" >
                 <h4>Nuevo Usuario</h4>
                   <form action="Php/nuevoUsuario.php" method="post">
                     <label>Usuario</label>
