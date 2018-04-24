@@ -14,12 +14,12 @@
                     <input type="text" name="usuario" class="form-control" style="width: 90%;display: inline-block;margin:10px;" required>
                     <label>Contraseña</label>
                     <input type="password" name="password" class="form-control"  style="width: 90%;display: inline-block;margin:10px;" required><br>
-                    <input type="Submit" name="Submit" value="Submit" id="botonLog" class="btn btn-ligth">
+                    <input type="Submit" name="login" value="Submit" id="botonLog" class="btn btn-ligth">
                   </form>
                 </div>
                 <div class="nuevoUsuario" id=nuevo>
                 <h4>Nuevo Usuario</h4>
-                  <form action="nuevoUsuario()" method="post">
+                  <form action="Php/nuevoUsuario.php" method="post">
                     <label>Usuario</label>
                     <input type="text" class="form-control" name="Usuario" style="width: 90%;display: inline-block;margin:10px;" required>
                     <label>Contraseña</label>

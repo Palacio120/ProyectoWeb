@@ -2,18 +2,20 @@
 	session_start();
 
 	include_once('coneccion.php');
-	$DB=new Mysql();
+	$DB=new configDB();
+  $DB->Mysql();
+
 
 	if (isset($_POST['login'])) {
            $nombre= $_POST['usuario'];
-           $contraseña=md5($_POST['password']);
+           $Contraseña=md5($_POST['password']);
 
-           $query= $DB->CONSULTA("SELECT * from usuarios WHERE Usuario='$nombre' AND password= '$contraseña'");
-
+           $query= $DB->CONSULTA("SELECT * from usuarios WHERE Usuarios='$nombre' AND Contraseña= '$Contraseña'");
+           
            while($i=$DB->Obtener_filas($query)){
            		$_SESSION["usuario"]=$nombre;
-             	$_SESSION["nombre"]=$row["nombre"];
-               	echo "<script>window.location='../Estudiante/principal.php'</script>";
+              $_SESSION["id"]=$i["ID"];
+               	echo "<script>window.location='../Index.php'</script>";
            }
          }
 	
