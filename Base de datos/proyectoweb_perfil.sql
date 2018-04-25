@@ -1,8 +1,8 @@
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: proyectoweb
+-- Host: localhost    Database: proyectoweb
 -- ------------------------------------------------------
--- Server version	5.7.20-log
+-- Server version	5.7.18-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -33,8 +33,11 @@ CREATE TABLE `perfil` (
   `Tipo` varchar(45) DEFAULT NULL,
   `Nombre_Img` varchar(255) DEFAULT NULL,
   `Direccion` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`idPerfil`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `IDUsusario` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`idPerfil`),
+  KEY `Id_Usuario_idx` (`IDUsusario`),
+  CONSTRAINT `Id_Usuario` FOREIGN KEY (`IDUsusario`) REFERENCES `usuarios` (`ID`) ON DELETE NO ACTION ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,6 +46,7 @@ CREATE TABLE `perfil` (
 
 LOCK TABLES `perfil` WRITE;
 /*!40000 ALTER TABLE `perfil` DISABLE KEYS */;
+INSERT INTO `perfil` VALUES (1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,6);
 /*!40000 ALTER TABLE `perfil` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-20  6:41:42
+-- Dump completed on 2018-04-24 13:12:34
