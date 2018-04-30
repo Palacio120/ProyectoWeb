@@ -38,7 +38,7 @@
       $DB=new ConfigDB();
       $DB->Mysql();
 
-      $consulta=$DB->CONSULTA("SELECT `productos`.`idProductos`,`productos`.`Nombre`, `productos`.`Descripccion`,    `productos`.`Precio`,    `productos`.`Imagen`, `productos`.`NombreTemp`, `productos`.`Tipo` FROM `proyectoweb`.`productos`Limit 4;");
+      $consulta=$DB->CONSULTA("SELECT `productos`.`idProductos`,`productos`.`Nombre`, `productos`.`Descripccion`,    `productos`.`Precio`,    `productos`.`Imagen`, `productos`.`NombreTemp`, `productos`.`Tipo` FROM `productos`Limit 4;");
           ?>
          <div class="row" style="margin-top: 10px;">
          <?php
