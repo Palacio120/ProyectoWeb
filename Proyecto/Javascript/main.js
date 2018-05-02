@@ -1,16 +1,16 @@
 function NoLog(bol){
 		if (!bol) {
-			alert('No se encuentra logeado en la plataforma');	
+			alert('No se encuentra logeado en la plataforma');
 			window.location='index.php';
 		}
-		
+
 }
 
 function NoLog2(){
 
-	alert('No se encuentra logeado en la plataforma');	
+	alert('No se encuentra logeado en la plataforma');
 	window.location='LogUser.php';
-		
+
 }
 
 function AgregarCarrito(num){
@@ -28,7 +28,7 @@ function Mostrar_Formato(){
 
 function Consulta(){
           $.ajax({
-                  url:   'php/Buscador.php',
+                  url:   'Php/Buscador.php',
                   type:  'post',
                   beforeSend: function () {
                           $("#Ventana").html("Procesando, espere por favor...");
@@ -45,7 +45,7 @@ function Consulta1(tipo){
           };
           $.ajax({
                   data:  parametros,
-                  url:   'php/Buscador.php',
+                  url:   'Php/Buscador.php',
                   type:  'post',
                   beforeSend: function () {
                           $("#Ventana").html("Procesando, espere por favor...");

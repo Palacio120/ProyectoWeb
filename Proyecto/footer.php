@@ -1,5 +1,5 @@
         </div>
-        
+
           <footer class="footer">
             <div style="overflow-x: hidden;">
               <div class="row" style="text-align:center;">
@@ -38,13 +38,13 @@
                 <div class="col-3 col-sm">
                   <h6>Redes Sociales</h6>
                   <ul class="list-unstyled text-small">
-                    <a href="www.Twittwer.com"><img src="imagenes/twitter.png" alt="" width="50px" height="50px"></a>
-                    <a href="www.Facebook.com"><img src="imagenes/facebook.png" alt="" width="50px" height="50px"></a>
+                    <a href="\www.Twittwer.com"><img src="imagenes/twitter.png" alt="" width="50px" height="50px"></a>
+                    <a href="../../../../../../www.Facebook.com"><img src="imagenes/facebook.png" alt="" width="50px" height="50px"></a>
                   </ul>
                 </div>
               </div>
             </div>
-            
+
           </footer>
     </div>
   </body>

@@ -1,12 +1,12 @@
-<?php 
+<?php
 include_once('header.php');
-	
+
 	if(isset($_GET["idProd"])){
 		$idProd= $_GET["idProd"];
 	}else {
 		header('location: index.php');
 	}
-	include_once('Php/coneccion.php');
+	include_once('Php/Coneccion.php');
 
 	$DB= new ConfigDB();
 	$DB->Mysql();
