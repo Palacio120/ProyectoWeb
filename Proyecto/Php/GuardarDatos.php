@@ -1,4 +1,4 @@
-<?php
+<?php 
 	include_once('Coneccion.php');
 
 	$DB= new ConfigDB();
@@ -9,7 +9,7 @@
 	$Direccion=$_POST["Direccion"];
 	$Tarjeta=$_POST["Tarjeta"];
 	$CVV=$_POST["CVV"];
-	$Usuario=$_SESSION["id"];
+	$Usuario=$_SESSION["Id"];
 	$Total=$_SESSION["PrecioTotal"];
 
 	$DB->CONSULTA("UPDATE Perfil set `Nombre` ='$Nombre',`Telefono` ='$Telefono',`Correo` ='$Correo',`TarjetaNum` ='$Tarjeta',`CVV` ='$CVV',`Direccion` ='$Direccion' WHERE IDUsusario=$Usuario)");

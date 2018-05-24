@@ -1,9 +1,9 @@
-<?php
+<?php 
 	include_once('header.php');
 	if (!isset($_SESSION["usuario"])) {
 		echo "<script>Window.onload=NoLog2();</script>";
-	}
-	include_once("Php/Coneccion.php");
+	} 
+	include_once("Php/Coneccion.Php");
 	$DB=new ConfigDB();
 	$DB->Mysql();
 	$usuario=$_SESSION["id"];
@@ -12,9 +12,9 @@
 		$id=$_GET["id"];
 		$DB->CONSULTA("INSERT into Temp values(0,'$id','$usuario')");
 	}
-
-
-	$query=$DB->CONSULTA("SELECT * from `productos` Join `Temp` on productos.idProductos= Temp.Id_Prod where Id_Usuario='$usuario'");
+	
+	
+	$query=$DB->CONSULTA("SELECT * from `proyectoweb`.`productos` Join `proyectoweb`.`Temp` on productos.idProductos= Temp.Id_Prod where Id_Usuario='$usuario'");
 	if ($DB->total_Filas($query)<=0) {
 		?>
 		<div class="container" style="text-align: center; display: block; margin-top: 25%; margin-bottom: 25%">
@@ -22,15 +22,15 @@
 	 	</div>
 
 
-		<?php
+		<?php 
 	}else{
 		?>
 		</div>
 		<div class="container" id="Carrito" style="height: 100%; display: block;">
-		<table class="table" cellpadding="colapse" style="width: 100%;text-align: center;margin: 10px; height: 100%">
-
+		<table class="table" cellpadding="colapse" style="width: 100%;text-align: center;margin: 10px; height: 100%">			
+			
 		<?php
-		$Num= 0;
+		$Num= 0; 
 		while ($rs=$DB->Obtener_filas($query)) {
 			$Num++;
 			?>
@@ -43,28 +43,28 @@
 							<div class="Esquina">
 							<a href="#" onclick="Eliminar(<?php echo $rs['idTemp']; ?>)"><img src="Imagenes/eliminar.png" alt="eliminar"></a>
 						</div>
-						<?php
-							echo "$".$rs["Precio"].".00 MXN";
-							$Total+=$rs["Precio"];
+						<?php 
+							echo "$".$rs["Precio"].".00 MXN"; 
+							$Total+=$rs["Precio"]; 
 							$_SESSION["PrecioTotal"]=$Total;
 						?>
-
+						
 						</div>
-
+						
 					</td>
-
-
+					
+					
 				</tr>
+				
 
-
-			<?php
+			<?php 
 		}
 		?>
 			<tr>
 				<td colspan="3">TOTAL</td>
 				<td><?php echo "$ ".$Total.".00 MXN"; ?></td>
 			</tr>
-
+			
 		</table>
 			<div class="row">
 				<div class="col-md-8"></div>
@@ -72,27 +72,15 @@
 					<button class="btn btn-primary" onclick="Mostrar_Formato()" style="margin: 10px;">Proceder al pago</button>
 				</div>
 			</div>
-
+			
 		</div>
-		<?php
-		include_once("Php/Coneccion.php");
-		$DB=new ConfigDB();
-		$DB->Mysql();
-		$usuario=$_SESSION["id"];
-		echo $usuario;
-
-			$consulta=$DB->CONSULTA("SELECT * from perfil where IDUsusario =$usuario");
-
-			while ($i=$DB->Obtener_filas($consulta)) {
-				
-		 	?>
 	<div class="container" id="Formato" style="display: none; text-align: center; margin-top: 10%; margin-bottom: 10%">
 		<h1>Datos del Usuario</h1>
 			<form action="Php/GuardarDatos.php" method="post" >
 				<div class="row">
 					<div class="col-md-4">
 						<label>Nombre</label>
-						<input type="text" name="Nombre" class="form-control" value="<?php if (!is_null($i['Nombre'])) {echo $i['Nombre'];} ?>" required >
+						<input type="text" name="Nombre" class="form-control" required >
 
 					</div>
 					<div class="col-md-4">
@@ -130,17 +118,16 @@
 						<input type="submit" name="Submit" class="btn btn-primary" style="margin-left: 20px;">
 					</div>
 				</div>
-
+				
 			</form>
 		</div>
-	<?php } ?>
 	</div>
-		<?php
+		<?php 
 	}
  ?>
 
+ 	
 
-
- <?php
- 	include_once('footer.php')
+ <?php 
+ 	include_once('Footer.php')
   ?>
